@@ -1,0 +1,218 @@
+:root{
+	--main-bg-color: rgb(13, 26, 40, 1.0);
+	--main-hd-color: rgb(10, 19, 30);
+	--main-font-color: white;
+}
+
+
+
+
+
+body{
+	background-color: var(--main-bg-color);
+}
+
+
+#photo-preview{
+	position: fixed;
+	background: none;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	min-width: 100vw;
+	top: 0;
+	z-index: 100;
+	backdrop-filter: blur(8px); /* KI hat geholfen die backdrop.filter statement zu finden*/
+}
+
+#preview-img{	
+	position: absolute;
+	height: 75vh;
+	width: 75vw;
+	border-radius: 20px;
+
+}
+
+#close-btn{
+	position: absolute;
+	top: 5vh;
+	right: 5vw;
+	background: none;
+	border: none;
+	color: var(--main-font-color);
+	font-size: 2rem;
+}
+
+
+#like-btn{
+	position: relative;
+	top: 39vh;
+	left: 36vw;
+	font-size: 3rem;
+	background: none;
+	border: none;
+	color: white;
+}
+#like-btn.active{
+	color: red;
+}
+
+
+
+.content{
+	background-color: var(--main-bg-color);;
+	color: var(--main-font-color);
+	display: flex;
+	flex-wrap: wrap;
+	transition: 0.6s cubic-bezier(0.65, 0, 0.35, 1); /*kann nicht erklären komplett */
+}
+
+
+
+
+
+
+.contentFAQ{
+	background-color: var(--main-bg-color);;
+	color: var(--main-font-color);
+	text-align: center;
+	max-width: 450px;
+	transform: translateX(35vw);
+}
+
+.contentFAQ-h3{
+	padding-top: 15px;
+}
+
+.contentFAQ-p-inspiration{
+	text-align: left;
+	margin-left: 7vw;
+}
+
+#FAQ-a{
+	text-decoration: none;
+	color: var(--main-font-color);
+}
+
+#FAQ-a:hover{
+	color: gray;
+}
+
+.p-danke{
+	padding-top: 30px;
+}
+
+
+.contentFAQ-inspiration-ul{
+	text-align: left;
+	margin-left: 5vw;
+}
+
+
+.header{
+	display: flex;
+	background-color: var(--main-hd-color);
+}
+
+.headerFAQ{
+	display: flex;
+	background-color: var(--main-hd-color);
+	text-align: center;
+}
+
+
+
+.header-text{
+	color: var(--main-font-color);
+	margin-left: 20px;
+}
+
+.header-textFAQ{
+	transform: translateX(41vw);
+	color: var(--main-font-color);
+}
+
+
+
+
+.search-field{
+	margin: auto 100px;
+	color: var(--main-font-color);
+}
+
+#search-field{
+	width: 75vw;
+	height: 50px;
+	box-sizing: border-box;
+	border: 2px solid brown;
+	border-radius: 20px	;
+	background-color: burlywood;
+}
+
+
+.img{
+	flex: 1 0 300px; 
+	height: 300px;
+	max-width: 800px;
+	aspect-ratio: 16 / 9;   
+	object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+	margin: 7px;
+
+	border-radius: 10px	;
+}
+/* */
+.img:hover{
+	cursor: pointer;
+}
+
+
+/* 
+================
+sidebar
+================
+ */
+
+#sidebar-btn{
+	background: none;
+	color: var(--main-font-color);
+	border: none;
+}
+
+#sidebar-btn:hover{
+	color: gray;
+}
+
+.sidebar{
+	position: fixed;
+	width: 175px;
+	height: 100vh;
+	background-color: rgb(13, 26, 40, 1.0);
+	color: var(--main-font-color);
+
+	border-right: 4px solid darkgray;
+
+	transform: translateX(-110%);
+	transition: 0.6s cubic-bezier(0.65, 0, 0.35, 1); /*kann nicht erklären komplett */
+}
+
+.sidebar.active{
+	transform: translateX(0);
+}
+
+
+.sidebarli{
+	list-style: none;
+	padding: 10px;
+}
+
+.sidebarlink{
+	color: var(--main-font-color);
+	text-decoration-line: none;
+}	
+
+.sidebarlink:hover{
+	color: gray;
+}
